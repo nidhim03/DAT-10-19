@@ -39,10 +39,10 @@ import pandas as pd
 
 
 # Note for this file to work need to insert your keys here:
-API_PUBLIC = 'x'
-API_SECRET = 'x'
-APP_PUBLIC = 'x'
-APP_SECRET = 'x'
+API_PUBLIC = 'r8ZOzLMZoouq5u8iCdmNKiSMx'
+API_SECRET = 'tIqgdrMHBrkMRXfBlY36cUpxDw34LygVL9hBg5A4Dl0yIQLOAb'
+APP_PUBLIC = '1216043853284827136-XgLCLf15GtZZ0oIsgInUIjJT1lnPmT'
+APP_SECRET = 'ksKmplYg3WBqwThvTbhknJmhBYE7t43Bt0ZijmExr2Nq2'
 
 auth = OAuth1(API_PUBLIC, API_SECRET,APP_PUBLIC,APP_SECRET)
 
@@ -115,6 +115,7 @@ def find_hashtag(
         + "&result_type=" + search_type
         + "&count=" + str(count)
         )
+    print(search_url)
     print(search_url)
     query_output = requests.get(search_url, auth=auth)
     output_list = query_output.json()['statuses']

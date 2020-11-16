@@ -119,7 +119,7 @@ def get_followers(name, keys = ['name', 'followers_count', 'friends_count', 'scr
 
 
 #Function 4
-def friends_of_friends(people, keys = ['id', 'id_str', 'name', 'screen_name', 'location'
+def friends_of_friends1(people, keys = ['id', 'id_str', 'name', 'screen_name', 'location'
     , 'description', 'url', 'entities', 'protected', 'followers_count', 'friends_count', 'listed_count'
     , 'created_at', 'favourites_count', 'utc_offset', 'time_zone', 'geo_enabled', 'verified', 'statuses_count'
     , 'lang', 'status', 'contributors_enabled', 'is_translator', 'is_translation_enabled', 'profile_background_color'
@@ -159,6 +159,7 @@ def friends_of_friends(people, keys = ['id', 'id_str', 'name', 'screen_name', 'l
             friend_ids.append(people['id'])
             all_user_data.append(people)
         all_user_ids.append(friend_ids)
+    
     
     #this helps us figure out the shared friends between the people
     shared_friends = [x for x in all_user_ids[0] if x in all_user_ids[1]]
